@@ -3,7 +3,7 @@
 @import "functions";
 
 // default color scheme
-$bg_color: if($variant == "dark", #444, #fcfcfc);
+$bg_color: if($variant == "dark", #444, #dadada);
 $fg_color: if($variant == "dark", #ddd, #2d2d2d);
 $base_color: if($variant == "dark", #333, #fcfcfc);
 $text_color: if($variant == "dark", #eee, #2d2d2d);
@@ -44,11 +44,11 @@ $toolbar_fg_color: $fg_color;
 $titlebar_bg_color: $dark_bg_color;
 $titlebar_fg_color: $dark_fg_color;
 
-$menu_bg_color: $dark_bg_color;
-$menu_fg_color: $dark_fg_color;
+$menu_bg_color: $bg_color;
+$menu_fg_color: $fg_color;
 
-$menubar_bg_color: $dark_bg_color;
-$menubar_fg_color: $dark_fg_color;
+$menubar_bg_color: $bg_color;
+$menubar_fg_color: $fg_color;
 
 $panel_bg_color: $dark_bg_color;
 $panel_fg_color: $dark_fg_color;
