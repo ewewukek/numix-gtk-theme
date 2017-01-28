@@ -1,23 +1,21 @@
 # Numix GTK Theme
 
-gtk-color-scheme = "bg_color:#eeeeee"
-gtk-color-scheme = "fg_color:#555555"
-gtk-color-scheme = "base_color:#ffffff"
-gtk-color-scheme = "text_color:#333333"
-gtk-color-scheme = "selected_bg_color:#f0544c"
-gtk-color-scheme = "selected_fg_color:#ffffff"
-gtk-color-scheme = "tooltip_bg_color:#444444"
-gtk-color-scheme = "tooltip_fg_color:#eeeeee"
-gtk-color-scheme = "titlebar_bg_color:#444444"
-gtk-color-scheme = "titlebar_fg_color:#dddddd"
-gtk-color-scheme = "menubar_bg_color:#444444"
-gtk-color-scheme = "menubar_fg_color:#dddddd"
-gtk-color-scheme = "toolbar_bg_color:#eeeeee"
-gtk-color-scheme = "toolbar_fg_color:#555555"
-gtk-color-scheme = "menu_bg_color:#444444"
-gtk-color-scheme = "menu_fg_color:#dddddd"
-gtk-color-scheme = "panel_bg_color:#444444"
-gtk-color-scheme = "panel_fg_color:#dddddd"
+gtk-color-scheme = "bg_color:#dadada"
+gtk-color-scheme = "fg_color:#2d2d2d"
+gtk-color-scheme = "base_color:#fcfcfc"
+gtk-color-scheme = "text_color:#2d2d2d"
+gtk-color-scheme = "selected_bg_color:#1793d1"
+gtk-color-scheme = "selected_fg_color:#fcfcfc"
+gtk-color-scheme = "tooltip_bg_color:#ffffdf"
+gtk-color-scheme = "tooltip_fg_color:#2d2d2d"
+gtk-color-scheme = "titlebar_bg_color:#252525"
+gtk-color-scheme = "titlebar_fg_color:#fcfcfc"
+gtk-color-scheme = "menubar_bg_color:#dadada"
+gtk-color-scheme = "menubar_fg_color:#2d2d2d"
+gtk-color-scheme = "menu_bg_color:#dadada"
+gtk-color-scheme = "menu_fg_color:#2d2d2d"
+gtk-color-scheme = "panel_bg_color:#252525"
+gtk-color-scheme = "panel_fg_color:#fcfcfc"
 gtk-color-scheme = "link_color:#f06860"
 
 # Default Style
@@ -558,10 +556,10 @@ style "xfwm-tabwin" {
         Xfwm4TabwinWidget::alpha = 1.0
         Xfwm4TabwinWidget::border-radius = 2
 
-	bg[NORMAL] = @menu_bg_color
+	bg[NORMAL] = shade (1.6, @panel_bg)
 	bg[SELECTED] = @menu_bg_color
 
-	fg[NORMAL] = @menu_fg_color
+	fg[NORMAL] = @panel_fg_color
 
 	engine "murrine" {
 		contrast = 0.0
@@ -607,9 +605,9 @@ class "*Xfce*Panel*" style "murrine-panel"
 # Thunar Styles
 
 style "sidepane" {
-	base[NORMAL] = @bg_color
+	base[NORMAL] = shade(1.15, mix(0.2, @selected_bg_color, @bg_color))
 	base[INSENSITIVE] = mix (0.4, shade (1.35, @selected_bg_color), shade (0.9, @base_color))
-	bg[NORMAL] = @bg_color
+	bg[NORMAL] = shade(1.15, mix(0.2, @selected_bg_color, @bg_color))
 	text[NORMAL] = mix (0.9, @fg_color, @bg_color)
 }
 
