@@ -447,9 +447,9 @@ style "murrine-panel" = "murrine-thin" {
 	xthickness = 2
 
 	bg[NORMAL] = @panel_bg_color
-	bg[PRELIGHT] =  mix (0.21, @panel_fg_color, @panel_bg_color)
-	bg[SELECTED] =  mix (0.21, @panel_fg_color, @panel_bg_color)
-	bg[ACTIVE] = shade (0.8, @panel_bg_color)
+	bg[PRELIGHT] =  mix (0.11, @panel_fg_color, @selected_bg_color)
+	bg[SELECTED] =  mix (0.11, @panel_fg_color, @selected_bg_color)
+	bg[ACTIVE] = mix (0.21, @panel_bg_color, @selected_bg_color)
 	bg[INSENSITIVE] = @panel_bg_color
 
 	fg[NORMAL] = @panel_fg_color
@@ -601,6 +601,7 @@ widget "*Pager*" style "workspace-switcher"
 
 widget "*Xfce*Panel*" style "murrine-panel"
 class "*Xfce*Panel*" style "murrine-panel"
+class "XfceTasklist" style "murrine-panel"
 
 # Thunar Styles
 
