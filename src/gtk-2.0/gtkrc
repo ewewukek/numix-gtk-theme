@@ -556,7 +556,7 @@ style "xfwm-tabwin" {
         Xfwm4TabwinWidget::alpha = 1.0
         Xfwm4TabwinWidget::border-radius = 2
 
-	bg[NORMAL] = shade (1.6, @panel_bg)
+	bg[NORMAL] = shade (1.6, @panel_bg_color)
 	bg[SELECTED] = @menu_bg_color
 
 	fg[NORMAL] = @panel_fg_color
