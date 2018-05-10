@@ -49,6 +49,9 @@ zip: all
 	$(UTILS) install $(ROOT_DIR)/dist/$$(basename $(INSTALL_DIR))
 	cd $(ROOT_DIR)/dist && zip --symlinks -rq $$(basename $(INSTALL_DIR)) $$(basename $(INSTALL_DIR))
 
+xfce-set:
+	xfconf-query -c xsettings -p /Net/ThemeName -s "Numix-ewew"
+	xfconf-query -c xfwm4 -p /general/theme -s "Numix-ewew"
 
 .PHONY: all
 .PHONY: css
