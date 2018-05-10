@@ -1,16 +1,16 @@
 ## Numix
 ##### A modern flat theme with a combination of light and dark elements. It supports GNOME, Unity, Xfce and Openbox.
-[![By The Numix Project](https://img.shields.io/badge/By-The%20Numix%20Project-f0544c.svg?style=flat-square)](https://numixproject.org/) &nbsp;[![Circle CI](https://img.shields.io/circleci/project/numixproject/numix-gtk-theme/master.svg?circle-token=b14acf911433d315298235b0c2fbf7b2670a92a8&maxAge=2592000&style=flat-square)](https://circleci.com/gh/numixproject/numix-gtk-theme/tree/master) &nbsp;[![GitHub release](https://img.shields.io/github/release/numixproject/numix-gtk-theme.svg?maxAge=3600&style=flat-square)](https://github.com/numixproject/numix-gtk-theme/releases/latest) &nbsp;![Supports GTK+ 3.18](https://img.shields.io/badge/GTK%2B-3.18-4a90d9.svg?style=flat-square) &nbsp;![Supports GTK+ 3.20](https://img.shields.io/badge/GTK%2B-3.22-4a90d9.svg?style=flat-square)
+[![By The Numix Project](https://img.shields.io/badge/By-The%20Numix%20Project-f0544c.svg?style=flat-square)](https://numixproject.org/) &nbsp;[![Circle CI](https://img.shields.io/circleci/project/numixproject/numix-gtk-theme/master.svg?circle-token=b14acf911433d315298235b0c2fbf7b2670a92a8&maxAge=3600&style=flat-square)](https://circleci.com/gh/numixproject/numix-gtk-theme/tree/master) &nbsp;[![GitHub release](https://img.shields.io/github/release/numixproject/numix-gtk-theme.svg?maxAge=3600&style=flat-square)](https://github.com/numixproject/numix-gtk-theme/releases/latest) &nbsp;![Supports GTK+ 3.18](https://img.shields.io/badge/GTK%2B-3.18-4a90d9.svg?style=flat-square) &nbsp;![Supports GTK+ 3.24](https://img.shields.io/badge/GTK%2B-3.24-4a90d9.svg?style=flat-square)
 
 ## Install It
 
-### Official Distro Packages
+### Distro Packages
 |Distro|Install Command/Links|
 |:----:|:----:|
-|![arch](https://dl.dropboxusercontent.com/u/60521097/archlogo26x26.png)&nbsp;![antergos](https://dl.dropboxusercontent.com/u/60521097/logo-square26x26.png)|`sudo pacman -S numix-themes`|
-|![openSUSE](https://dl.dropboxusercontent.com/u/60521097/Geeko-button-bling7.png)|[1 Click Install](http://software.opensuse.org/ymp/openSUSE:Factory/standard/numix-gtk-theme.ymp) &nbsp;\|&nbsp; [OBS Repo](http://software.opensuse.org/download.html?project=openSUSE%3AFactory&package=numix-gtk-theme)|
-|![fedora](https://dl.dropboxusercontent.com/u/60521097/fedora-logo.png)|`sudo dnf install numix-gtk-theme`|
-|[![debian](https://www.debian.org/logos/openlogo-nd-25.jpg)](https://www.debian.org/)&nbsp;![ubuntu](https://dl.dropboxusercontent.com/u/60521097/ubuntu_orange_hex.png)|`sudo apt install numix-gtk-theme`|
+|![arch][arch] &nbsp;![antergos][antergos]|`sudo pacman -S numix-gtk-theme`|
+|![opensuse][opensuse]|[1 Click Install](http://software.opensuse.org/ymp/openSUSE:Factory/standard/numix-gtk-theme.ymp) &nbsp;\|&nbsp; [OBS Repo](http://software.opensuse.org/download.html?project=openSUSE%3AFactory&package=numix-gtk-theme)|
+|![fedora][fedora]|`sudo dnf install numix-gtk-theme`|
+|![debian][debian] &nbsp;![ubuntu][ubuntu]|`sudo apt install numix-gtk-theme`|
 
 ## Build It
 
@@ -18,32 +18,20 @@ First, you need to compile the theme using the [Sass](http://sass-lang.com/) com
 
 To install Sass, install Ruby and the gem command using your distribution's package manager. Then install `sass` with the `gem` command,
 
-`gem install sass`
+`gem install sass` (not needed for Ubuntu/Debian)
 
 You'll also need the ```glib-compile-schemas``` and  ```gdk-pixbuf-pixdata``` commands in your path to generate the gresource binary. Install them using your distribution's package manager.
 
-#### Debian, Ubuntu
+|Distro|Commands|
+|:----:|:----:|
+|![arch][arch] &nbsp;![antergos][antergos]|`sudo pacman -S glib2 gdk-pixbuf2`|
+|![opensuse][opensuse]|`sudo zypper install glib2-devel gdk-pixbuf-devel`|
+|![fedora][fedora]|`sudo dnf install glib2-devel gdk-pixbuf2-devel`|
+|![debian][debian] &nbsp;![ubuntu][ubuntu]|`sudo apt-get install ruby-sass libglib2.0-dev libgdk-pixbuf2.0-dev libxml2-utils`|
 
- ```sh
-sudo apt-get install libglib2.0-dev libgdk-pixbuf2.0-dev libxml2-utils
-```
-
-#### Fedora
-
-```sh
-sudo dnf install glib2-devel gdk-pixbuf2-devel
-```
-
-#### Arch Linux
+After installing all the dependencies, change to the cloned directory and, run the following in Terminal,
 
 ```sh
-sudo pacman -S glib2 gdk-pixbuf2
-```
-
-After installing all the dependencies, switch to the cloned directory and, run the following in Terminal,
-
-```sh
-make
 sudo make install
 ```
 
@@ -60,6 +48,8 @@ To set the theme in Xfce, run the following commands in Terminal,
 xfconf-query -c xsettings -p /Net/ThemeName -s "Numix"
 xfconf-query -c xfwm4 -p /general/theme -s "Numix"
 ```
+
+In Openbox you can set the theme with [ObConf](http://openbox.org/wiki/ObConf:About) tool. Alternatively, you can set the theme by changing the `<name> `key value to `Numix` in the `<theme>` section of your rc.xml file.
 
 ### For contributors
 Start by reviewing the [guidelines for contributing](https://github.com/numixproject/numix-gtk-theme/blob/master/.github/CONTRIBUTING.md).
@@ -86,3 +76,12 @@ Murrine theme engine
 Report bugs or contribute at [GitHub](https://github.com/numixproject/numix-gtk-theme)
 
 License: GPL-3.0+
+
+
+[antergos]: https://antergos.com/distro-logos/logo-square26x26.png "antergos"
+[arch]: https://antergos.com/distro-logos/archlogo26x26.png "arch"
+[fedora]: https://antergos.com/distro-logos/fedora-logo.png "fedora"
+[openSUSE]: https://antergos.com/distro-logos/Geeko-button-bling7.png "openSUSE"
+[ubuntu]: https://antergos.com/distro-logos/ubuntu_orange_hex.png "ubuntu"
+[debian]: https://antergos.com/distro-logos/openlogo-nd-25.png "debian"
+
