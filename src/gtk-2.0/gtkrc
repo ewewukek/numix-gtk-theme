@@ -605,6 +605,16 @@ widget "*Xfce*Panel*" style "murrine-panel"
 class "*Xfce*Panel*" style "murrine-panel"
 class "XfceTasklist" style "murrine-panel"
 
+style "cpugraph" {
+	bg[ACTIVE] = @titlebar_bg_color
+	engine "murrine" {
+		roundness = 0
+		border_shades = { 1.0, 1.0 }
+		trough_border_shades = { 1.0, 1.0 }
+	}
+}
+widget "*Xfce*Panel*cpugraph*" style "cpugraph"
+
 # Thunar Styles
 
 style "sidepane" {
