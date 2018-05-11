@@ -27,4 +27,29 @@
             text-shadow: none;
         }
     }
+
+    .xfce4-panel {
+        progressbar {
+            &.horizontal {
+                trough,
+                progress { min-height: 4px; }
+            }
+
+            &.vertical {
+                trough,
+                progress { min-width: 4px; }
+            }
+
+            trough {
+                border: 0;
+                border-radius: 0;
+                background-color: transparent;
+                background-image: none;
+            }
+
+            progress {
+                border-radius: 0;
+            }
+        }
+    }
 }
